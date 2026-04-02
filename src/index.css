@@ -1,6 +1,7 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
-
+/* আপনার আগের কোডগুলো নিচে যেমন আছে তেমনই থাকবে */
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background: #0b1120; }
 ::-webkit-scrollbar-thumb { background: #3b82f6; border-radius: 10px; }

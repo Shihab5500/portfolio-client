@@ -1,48 +1,79 @@
 // import React from 'react';
+// import { FaGraduationCap, FaLaptopCode, FaSeedling, FaBullseye } from 'react-icons/fa';
 
 // const About = () => {
 //   return (
-//     <section id="about" className="py-20 bg-slate-800 text-white px-6">
-//       <div className="max-w-6xl mx-auto">
+//     <section id="about" className="py-24 bg-gray-50 dark:bg-[#020617] transition-colors duration-300">
+//       <div className="max-w-7xl mx-auto px-6">
         
-//         <section id="about" className="py-2 ">
-//           <div className="max-w-7xl mx-auto px-6">
-//           {/* শিরোনাম */}
-//             <div className="text-center mb-16">
-//               <h2 className="text-4xl md:text-6xl font-black text-white mb-4">
-//               About <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Me</span>
-//               </h2>
-//             <div className="h-1 w-32 bg-gradient-to-r from-blue-600 to-transparent mx-auto rounded-full" />
-//           </div>
-//           {/* বাকি কন্টেন্ট */}
-//           </div>
-//         </section>
+//         {/* Section Header */}
+//         <div className="text-center mb-16">
+//           <h2 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white mb-4">
+//             About <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Me</span>
+//           </h2>
+//           <div className="h-1 w-24 bg-gradient-to-r from-blue-600 to-cyan-500 mx-auto rounded-full" />
+//         </div>
 
-//         <div className="grid md:grid-cols-2 gap-12 items-center">
-//           {/* Left Side: Story */}
-//           <div>
-//             <p className="text-gray-300 text-lg leading-relaxed mb-4">
-//               Hi, I am <span className="text-blue-400 font-bold">Shahariyar Sani Shihab</span>. Although I am formally studying Agricultural Science (B.Sc. in Agriculture), my true passion lies in the world of coding and technology.
-//             </p>
-//             <p className="text-gray-300 mb-6 text-lg leading-relaxed">
-//               As a self-taught MERN Stack developer, I love building modern and scalable web applications using MongoDB, Express.js, React.js, and Node.js.
-//             </p>
+//         <div className="grid lg:grid-cols-2 gap-12 items-center">
+          
+//           {/* Left Side: Text Content */}
+//           <div className="space-y-6 text-gray-700 dark:text-gray-300">
+//             <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+//               Hi, I'm <span className="text-blue-600 dark:text-blue-400">Shahariyar Sani Shihab</span>
+//             </h3>
             
+//             <p className="leading-relaxed text-lg">
+//               I am a dedicated MERN Stack Developer with a passion for building secure, scalable, and user-friendly web applications. Coming from an academic background in <strong>Agriculture</strong>, I discovered my true passion in technology and software engineering.
+//             </p>
+
+//             <p className="leading-relaxed text-lg">
+//               This unique journey has taught me resilience, adaptability, and the discipline to master complex concepts from scratch. My core expertise lies in React.js and the MERN ecosystem. I love turning complex problems into simple, beautiful interfaces.
+//             </p>
+
+//             {/* The Famous Quote */}
+//             <blockquote className="border-l-4 border-blue-500 pl-6 py-2 my-6 bg-blue-50 dark:bg-blue-900/10 rounded-r-xl italic font-medium text-gray-800 dark:text-gray-200 shadow-sm">
+//               "I believe coding is a lot like farming – you plant the logic, water it with patience, and harvest a great product!" 🌱
+//             </blockquote>
 //           </div>
 
-//           {/* Right Side: Education Card */}
-//           <div className="bg-slate-900 p-8 rounded-2xl border border-blue-500/30 shadow-xl shadow-blue-500/10">
-//             <h3 className="text-2xl font-bold mb-6 text-blue-400">Education</h3>
-//             <div className="relative border-l-2 border-gray-700 pl-6 ml-2">
-//               <div className="mb-4 relative">
-//                 <div className="absolute -left-[31px] top-1 bg-blue-500 h-4 w-4 rounded-full"></div>
-//                 <h4 className="text-xl font-semibold">B.Sc. in Agriculture</h4>
-//                 <p className="text-gray-400 text-sm">Exim Bank Agricultural University Bangladesh</p>
-//                 <p className="text-blue-500 text-xs font-mono mt-1">2025 - 2029 (Expected)</p>
+//           {/* Right Side: Quick Info Cards */}
+//           <div className="grid sm:grid-cols-2 gap-6">
+            
+//             <div className="bg-white dark:bg-slate-900 p-6 rounded-3xl border border-gray-200 dark:border-white/5 shadow-sm hover:shadow-lg transition-all transform hover:-translate-y-1">
+//               <div className="text-blue-500 bg-blue-50 dark:bg-blue-500/10 w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-4">
+//                 <FaLaptopCode />
 //               </div>
+//               <h4 className="font-bold text-gray-900 dark:text-white mb-2">Technical Focus</h4>
+//               <p className="text-sm text-gray-600 dark:text-gray-400">Frontend focused (React.js). Actively expanding skillset in Next.js & TypeScript for high-performance web solutions.</p>
 //             </div>
+
+//             <div className="bg-white dark:bg-slate-900 p-6 rounded-3xl border border-gray-200 dark:border-white/5 shadow-sm hover:shadow-lg transition-all transform hover:-translate-y-1">
+//               <div className="text-emerald-500 bg-emerald-50 dark:bg-emerald-500/10 w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-4">
+//                 <FaSeedling />
+//               </div>
+//               <h4 className="font-bold text-gray-900 dark:text-white mb-2">Continuous Growth</h4>
+//               <p className="text-sm text-gray-600 dark:text-gray-400">Quick learner adapting to new technologies. Currently exploring System Design & Advanced Backend Architecture.</p>
+//             </div>
+
+//             <div className="bg-white dark:bg-slate-900 p-6 rounded-3xl border border-gray-200 dark:border-white/5 shadow-sm hover:shadow-lg transition-all transform hover:-translate-y-1">
+//               <div className="text-purple-500 bg-purple-50 dark:bg-purple-500/10 w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-4">
+//                 <FaBullseye />
+//               </div>
+//               <h4 className="font-bold text-gray-900 dark:text-white mb-2">What I'm Looking For</h4>
+//               <p className="text-sm text-gray-600 dark:text-gray-400">Seeking a Junior MERN Stack or Frontend Developer role to build impactful products under experienced mentorship.</p>
+//             </div>
+
+//             <div className="bg-white dark:bg-slate-900 p-6 rounded-3xl border border-gray-200 dark:border-white/5 shadow-sm hover:shadow-lg transition-all transform hover:-translate-y-1">
+//               <div className="text-amber-500 bg-amber-50 dark:bg-amber-500/10 w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-4">
+//                 <FaGraduationCap />
+//               </div>
+//               <h4 className="font-bold text-gray-900 dark:text-white mb-2">Education</h4>
+//               <p className="text-sm text-gray-600 dark:text-gray-400">Studying Agriculture at Exim Bank Agricultural University, Bangladesh.</p>
+//             </div>
+
 //           </div>
 //         </div>
+
 //       </div>
 //     </section>
 //   );
@@ -51,65 +82,93 @@
 // export default About;
 
 
+
+
+
+
+
+
 import React from 'react';
+import { FaGraduationCap, FaLaptopCode, FaChartLine, FaBullseye } from 'react-icons/fa';
 
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-[#020617] text-white px-6">
-      <div className="max-w-6xl mx-auto">
+    <section id="about" className="py-24 bg-gray-50 dark:bg-[#020617] transition-colors duration-300">
+      <div className="max-w-7xl mx-auto px-6">
         
-        {/* শিরোনাম সেকশন */}
+        {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-black text-white mb-4">
-            About <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Me</span>
+          <h2 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white mb-4">
+            About <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Me</span>
           </h2>
-          <div className="h-1 w-32 bg-gradient-to-r from-blue-600 to-transparent mx-auto rounded-full" />
+          <div className="h-1 w-24 bg-gradient-to-r from-blue-600 to-cyan-500 mx-auto rounded-full" />
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           
-          {/* Left Side: Story & Programming Hero Mention */}
-          <div className="space-y-6">
-            <p className="text-gray-300 text-lg leading-relaxed">
-              Hi, I am <span className="text-blue-400 font-bold">Shahariyar Sani Shihab</span>. Although I am formally studying Agricultural Science (B.Sc. in Agriculture), my true passion lies in the world of coding and technology.
-            </p>
-            <p className="text-gray-300 text-lg leading-relaxed">
-              I have successfully completed a <span className="text-white font-semibold italic">Complete Web Development</span> course from <span className="text-blue-400 font-bold">Programming Hero</span>. This journey has transformed me into a skilled MERN Stack developer, where I've built 12+ industry-standard projects.
-            </p>
-            <p className="text-gray-300 text-lg leading-relaxed">
-              As a dedicated developer, I love building modern and scalable web applications using MongoDB, Express.js, React.js, and Node.js.
-            </p>
-          </div>
-
-          {/* Right Side: Education & Training Card */}
-          <div className="bg-slate-900/50 backdrop-blur-xl p-8 rounded-3xl border border-blue-500/30 shadow-2xl shadow-blue-500/5">
-            <h3 className="text-2xl font-bold mb-8 text-blue-400 flex items-center gap-2">
-              <span className="h-6 w-1 bg-blue-500 rounded-full"></span> Education & Training
+          {/* Left Side: Text Content */}
+          <div className="space-y-6 text-gray-700 dark:text-gray-300">
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+              Hi, I'm <span className="text-blue-600 dark:text-blue-400">Shahariyar Sani Shihab</span>
             </h3>
             
-            <div className="relative border-l-2 border-slate-800 pl-8 space-y-10">
+            <p className="leading-relaxed text-lg">
+              I am a dedicated MERN Stack Developer with a passion for building secure, scalable, and user-friendly web applications. Coming from an academic background in <strong>Agriculture</strong>, I discovered my true passion in technology and software engineering.
+            </p>
 
-              {/* University Education */}
-              <div className="relative">
-                <div className="absolute -left-[41px] top-1 bg-blue-600 h-4 w-4 rounded-full ring-4 ring-blue-600/20"></div>
-                <h4 className="text-xl font-bold text-white leading-none">B.Sc. in Agriculture</h4>
-                <p className="text-gray-400 text-sm mt-2">Exim Bank Agricultural University Bangladesh</p>
-                <p className="text-blue-500 text-xs font-mono mt-2 bg-blue-500/10 w-fit px-2 py-1 rounded">2025 - 2029 (Expected)</p>
-              </div>
+            <p className="leading-relaxed text-lg border-l-4 border-blue-500 pl-4 py-1">
+              <strong>What truly sets me apart is my dual expertise.</strong> I don't just build websites; I ensure they grow. Along with web development, I am highly skilled in <strong>SEO, Google Analytics (GA4), Google Tag Manager (GTM), and Social Media Boosting.</strong> 
+            </p>
 
-              {/* Professional Training from Programming Hero */}
-              <div className="relative">
-                <div className="absolute -left-[41px] top-1 bg-cyan-400 h-4 w-4 rounded-full ring-4 ring-cyan-400/20 shadow-[0_0_10px_#22d3ee]"></div>
-                <h4 className="text-xl font-bold text-white leading-none">Professional Web Development (MERN)</h4>
-                <p className="text-gray-400 text-sm mt-2">Programming Hero</p>
-                <div className="flex gap-2 mt-2">
-                    <span className="text-cyan-400 text-[10px] font-black uppercase tracking-widest px-2 py-0.5 bg-cyan-400/10 border border-cyan-400/20 rounded">Completed</span>
-                    <span className="text-gray-500 text-[10px] font-black uppercase tracking-widest px-2 py-0.5 bg-slate-800 rounded">Certificate Awaiting</span>
-                </div>
+            <p className="leading-relaxed text-lg">
+              Hiring me means you are not just getting a developer who writes clean code, but a strategic partner who understands digital visibility, user tracking, and business scaling.
+            </p>
+
+            {/* The Famous Quote */}
+            <blockquote className="border-l-4 border-emerald-500 pl-6 py-2 my-6 bg-emerald-50 dark:bg-emerald-900/10 rounded-r-xl italic font-medium text-gray-800 dark:text-gray-200 shadow-sm">
+              "I believe coding is a lot like farming – you plant the logic, water it with patience, and harvest a great product!" 🌱
+            </blockquote>
+          </div>
+
+          {/* Right Side: Quick Info Cards */}
+          <div className="grid sm:grid-cols-2 gap-6">
+            
+            <div className="bg-white dark:bg-slate-900 p-6 rounded-3xl border border-gray-200 dark:border-white/5 shadow-sm hover:shadow-lg transition-all transform hover:-translate-y-1">
+              <div className="text-blue-500 bg-blue-50 dark:bg-blue-500/10 w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-4">
+                <FaLaptopCode />
               </div>
+              <h4 className="font-bold text-gray-900 dark:text-white mb-2">Development</h4>
+              <p className="text-sm text-gray-600 dark:text-gray-400">Expert in React.js and the MERN stack. Building high-performance, responsive, and secure web applications.</p>
             </div>
+
+            {/* 🟢 New Marketing & SEO Card 🟢 */}
+            <div className="bg-white dark:bg-slate-900 p-6 rounded-3xl border border-gray-200 dark:border-white/5 shadow-sm hover:shadow-lg transition-all transform hover:-translate-y-1">
+              <div className="text-orange-500 bg-orange-50 dark:bg-orange-500/10 w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-4">
+                <FaChartLine />
+              </div>
+              <h4 className="font-bold text-gray-900 dark:text-white mb-2">SEO & Growth Edge</h4>
+              <p className="text-sm text-gray-600 dark:text-gray-400">The complete package. Proficient in SEO, GA4, GTM, and Ad Boosting to ensure your product reaches the right audience.</p>
+            </div>
+
+            <div className="bg-white dark:bg-slate-900 p-6 rounded-3xl border border-gray-200 dark:border-white/5 shadow-sm hover:shadow-lg transition-all transform hover:-translate-y-1">
+              <div className="text-purple-500 bg-purple-50 dark:bg-purple-500/10 w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-4">
+                <FaBullseye />
+              </div>
+              <h4 className="font-bold text-gray-900 dark:text-white mb-2">My Goal</h4>
+              <p className="text-sm text-gray-600 dark:text-gray-400">Seeking a dynamic MERN/Frontend Developer role where I can utilize both my coding and analytical skills.</p>
+            </div>
+
+            <div className="bg-white dark:bg-slate-900 p-6 rounded-3xl border border-gray-200 dark:border-white/5 shadow-sm hover:shadow-lg transition-all transform hover:-translate-y-1">
+              <div className="text-emerald-500 bg-emerald-50 dark:bg-emerald-500/10 w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-4">
+                <FaGraduationCap />
+              </div>
+              <h4 className="font-bold text-gray-900 dark:text-white mb-2">Education</h4>
+              <p className="text-sm text-gray-600 dark:text-gray-400">Studying Agriculture at Exim Bank Agricultural University, Bangladesh.</p>
+            </div>
+
           </div>
         </div>
+
       </div>
     </section>
   );
