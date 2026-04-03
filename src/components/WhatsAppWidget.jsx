@@ -17,11 +17,11 @@ const WhatsAppWidget = () => {
   };
 
   return (
-    // 🟢 flex flex-col items-end যোগ করা হয়েছে যাতে ডান দিকেই আটকে থাকে
-    <div className="fixed bottom-6 right-6 z-[100] flex flex-col items-end font-sans">
+    // 🟢 বাগ ফিক্স: pointer-events-none যোগ করা হয়েছে যাতে অদৃশ্য কন্টেইনার ক্লিক ব্লক না করে
+    <div className="fixed bottom-6 right-6 z-[100] flex flex-col items-end font-sans pointer-events-none">
       
-      {/* চ্যাট উইন্ডো (origin-bottom-right দেওয়া হয়েছে যাতে ডান কোনা থেকে ওপেন হয়) */}
-      <div className={`mb-4 w-72 sm:w-80 bg-white dark:bg-slate-900 rounded-3xl shadow-2xl border border-gray-100 dark:border-white/5 overflow-hidden transition-all duration-300 origin-bottom-right ${isOpen ? "scale-100 opacity-100" : "scale-0 opacity-0 pointer-events-none"}`}>
+      {/* চ্যাট উইন্ডো: ওপেন থাকলে pointer-events-auto হবে */}
+      <div className={`mb-4 w-72 sm:w-80 bg-white dark:bg-slate-900 rounded-3xl shadow-2xl border border-gray-100 dark:border-white/5 overflow-hidden transition-all duration-300 origin-bottom-right ${isOpen ? "scale-100 opacity-100 pointer-events-auto" : "scale-0 opacity-0 pointer-events-none"}`}>
         
         <div className="bg-gradient-to-r from-green-500 to-emerald-600 p-4 flex items-center justify-between text-white">
           <div className="flex items-center gap-3">
@@ -55,16 +55,16 @@ const WhatsAppWidget = () => {
             onChange={(e) => setMessage(e.target.value)}
             className="flex-1 bg-gray-100 dark:bg-slate-800 border-none rounded-full px-4 py-2 text-xs focus:ring-2 focus:ring-green-500 dark:text-white outline-none"
           />
-          <button type="submit" className="bg-green-500 hover:bg-green-600 text-white p-2.5 rounded-full transition-colors shadow-lg shadow-green-500/20">
+          <button type="submit" className="bg-green-500 hover:bg-green-600 text-white p-2.5 rounded-full transition-colors shadow-lg shadow-green-500/20 pointer-events-auto">
             <FaPaperPlane size={14} />
           </button>
         </form>
       </div>
 
-      {/* ফ্লোটিং বাটন */}
+      {/* ফ্লোটিং বাটন: pointer-events-auto যোগ করা হয়েছে যাতে বাটনটিতে ক্লিক কাজ করে */}
       <button 
         onClick={() => setIsOpen(!isOpen)}
-        className="w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full flex items-center justify-center text-3xl shadow-2xl shadow-green-500/40 hover:scale-110 active:scale-95 transition-all duration-300 relative group"
+        className="w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full flex items-center justify-center text-3xl shadow-2xl shadow-green-500/40 hover:scale-110 active:scale-95 transition-all duration-300 relative group pointer-events-auto"
       >
         <FaWhatsapp />
       </button>
