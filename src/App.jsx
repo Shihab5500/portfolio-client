@@ -1,3 +1,8 @@
+
+
+
+
+
 import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom"; 
 
@@ -14,7 +19,13 @@ import AdminDashboard from "./components/AdminDashboard";
 import AdminLogin from "./components/AdminLogin";
 import ProjectDetails from "./components/ProjectDetails"; 
 import Experience from "./components/Experience";
-import SEO from "./components/SEO"; // 🟢 SEO ইম্পোর্ট
+import SEO from "./components/SEO";
+import WhatsAppWidget from "./components/WhatsAppWidget";
+import Services from "./components/Services";
+
+// 🟢 Blog Components Import
+import Blog from "./components/Blog";
+import BlogPost from "./components/BlogPost";
 
 // Landing Page Component
 const Home = ({ handleSecretTap }) => (
@@ -26,6 +37,7 @@ const Home = ({ handleSecretTap }) => (
     <Education />
     <Experience/>
     <Skills />
+    <Services />
     <Projects />
     <Contact />
   </>
@@ -65,10 +77,10 @@ function App() {
 
   return (
     <BrowserRouter>
-      {/* 🟢 SEO কম্পোনেন্ট এখানে বসানো হলো */}
       <SEO /> 
       
       <div className="bg-slate-50 text-gray-900 dark:bg-[#020617] dark:text-white min-h-screen scroll-smooth transition-colors duration-300">
+        {/* Navbar needs to know the current location to handle links correctly */}
         <Navbar theme={theme} setTheme={setTheme} />
 
         <Routes>
@@ -84,10 +96,17 @@ function App() {
               {!isAdmin && !showLogin && <Home handleSecretTap={handleSecretTap} />} 
             </>
           } />
+          
           <Route path="/project/:id" element={<ProjectDetails />} />
+
+          {/* 🟢 Blog Routes */}
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:id" element={<BlogPost />} />
         </Routes>
 
         <Footer />
+        {/* 🟢 হোয়াটসঅ্যাপ উইজেট এখানে বসবে */}
+      <WhatsAppWidget />
       </div>
     </BrowserRouter>
   );
